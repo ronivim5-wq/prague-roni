@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>פראג כריסמס 26 🎄</title>
+<meta name="description" content="המפה של רוני לפראג: המלון וכל ההמלצות השמורות, לפי קטגוריות ומרחק הליכה.">
+<meta name="theme-color" content="#7a1f2b">
+<meta property="og:title" content="פראג כריסמס 26 🎄">
+<meta property="og:description" content="המלון וכל ההמלצות שלך על מפה אחת – עם מרחק הליכה וניווט מהמלון">
+<link rel="stylesheet" href="leaflet.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="title-row">
+    <h1>פראג כריסמס 26 <span aria-hidden="true">🎄</span></h1>
+    <span class="count" id="visitedCount" aria-live="polite"></span>
+  </div>
+  <p class="hotel-line">🏨 <bdi><b>Grandium Hotel Prague</b></bdi> · <bdi id="placesCount"></bdi></p>
+  <nav class="chips" id="chips" aria-label="סינון לפי קטגוריה"></nav>
+</header>
+<main>
+  <section class="map-wrap" aria-label="מפה">
+    <div id="map" role="application" aria-label="מפת פראג עם המקומות השמורים"></div>
+    <div class="map-btns">
+      <button type="button" id="btnHotel" title="חזרה למלון">🏨</button>
+      <button type="button" id="btnFit" title="הצג הכול">🗺️</button>
+      <button type="button" id="btnMe" title="איפה אני">📍</button>
+    </div>
+  </section>
+  <section class="list-wrap" aria-label="רשימת המקומות">
+    <div class="list-tools">
+      <div class="seg" role="group" aria-label="סידור">
+        <button type="button" data-sort="cat" class="on">לפי סוג</button>
+        <button type="button" data-sort="near">קרוב למלון</button>
+      </div>
+      <label class="hide-v"><input type="checkbox" id="hideVisited"> הסתר שביקרתי</label>
+    </div>
+    <div id="list"></div>
+    <details class="extras" id="extras">
+      <summary>🎁 תוספות שלי – לא מהרשימה שלך</summary>
+      <p class="muted">כמה דברים של חג המולד שלא היו ברשימה. לא מופיעים על המפה עד שפותחים כאן.</p>
+      <div id="extrasList"></div>
+      <div class="tips">
+        <h3>טיפים לחג</h3>
+        <ul>
+          <li>ב-24.12 (ערב חג המולד) רוב החנויות סוגרות בצהריים, והרבה מסעדות סגורות בערב – כדאי להזמין מקום מראש. גם 25–26.12 חגים, וחנויות גדולות סגורות.</li>
+          <li>השווקים הגדולים (כיכר העיר העתיקה, ואצלב) פועלים בדרך כלל גם בימי החג עצמם.</li>
+          <li>בימים שלפני החג מוכרים ברחובות קרפיונים חיים מחביות – מסורת צ׳כית.</li>
+        </ul>
+      </div>
+    </details>
+    <p class="foot muted">המרחקים והזמנים משוערים: קו ישר ×1.3, בקצב של כ-80 מטר לדקה. הדירוגים מגוגל מפות (נובמבר 2026). הסימונים "ביקרתי" נשמרים בטלפון הזה.</p>
+  </section>
+</main>
+<script src="leaflet.js"></script>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
